@@ -1,0 +1,24 @@
+﻿@model List<MVC7AMTrickybatch.Models.EmployeeModel>
+@{
+    ViewBag.Title = "GetmePartialView";
+}
+
+<h2>GetmePartialView</h2>
+
+@{
+    var a = Html.Partial("_mypartialView", Model);
+    int c = 12;
+    if (c == 10) {
+        @a;
+    }
+    else {
+        <p>No Partial View</p>
+    }
+
+ }<br />
+
+
+@{
+     Html.RenderPartial("_mypartialView", Model);
+    
+    }

@@ -135,7 +135,7 @@ namespace MVC7AMTrickybatch.Controllers
             return View(listObj);
         }
 
-        public ActionResult getView8()
+        public ActionResult getView8(int? id)
         {
             EmployeeModel obj = new Models.EmployeeModel();
             obj.EmpId = 1;
@@ -179,9 +179,81 @@ namespace MVC7AMTrickybatch.Controllers
             return View(empdeptObj);
         }
 
-        public RedirectResult getView9(int id)
+        public ViewResult getView9(int id)
+        {
+            DepartmentModel dept = new DepartmentModel();
+            dept.DeptId = 1;
+            dept.DeptName = "IT";
+
+            return View("getView", dept);
+        }
+        public RedirectResult gotoGoogle()
         {
             return Redirect("http://www.google.com");
+        }
+        public RedirectResult gotoGoogle2()
+        {
+            return Redirect("~/new/getView8?id=1");
+        }
+        public RedirectResult gotoGoogle3()
+        {
+            return Redirect("~/new/gotoGoogle4?id=1&name=malesh");
+        }
+        public ViewResult gotoGoogle4(int id,string name)
+        {
+            return View();
+        }
+
+        public ActionResult GetmePartialView()
+        {
+            EmployeeModel obj = new Models.EmployeeModel();
+            obj.EmpId = 1;
+            obj.EmpName = "Balu";
+            obj.EmpSalary = 3450000;
+
+
+            EmployeeModel obj1 = new Models.EmployeeModel();
+            obj1.EmpId = 2;
+            obj1.EmpName = "Mallesh";
+            obj1.EmpSalary = 230000;
+
+            EmployeeModel obj2 = new Models.EmployeeModel();
+            obj2.EmpId = 3;
+            obj2.EmpName = "jyothi";
+            obj2.EmpSalary = 3250000;
+
+            List<EmployeeModel> listObj = new List<EmployeeModel>();
+            listObj.Add(obj);
+            listObj.Add(obj1);
+            listObj.Add(obj2);
+
+            return View(listObj);
+        }
+
+        public PartialViewResult GetmePartialView2()
+        {
+            EmployeeModel obj = new Models.EmployeeModel();
+            obj.EmpId = 1;
+            obj.EmpName = "Balu";
+            obj.EmpSalary = 3450000;
+
+
+            EmployeeModel obj1 = new Models.EmployeeModel();
+            obj1.EmpId = 2;
+            obj1.EmpName = "Mallesh";
+            obj1.EmpSalary = 230000;
+
+            EmployeeModel obj2 = new Models.EmployeeModel();
+            obj2.EmpId = 3;
+            obj2.EmpName = "jyothi";
+            obj2.EmpSalary = 3250000;
+
+            List<EmployeeModel> listObj = new List<EmployeeModel>();
+            listObj.Add(obj);
+            listObj.Add(obj1);
+            listObj.Add(obj2);
+
+            return PartialView("_mypartialView", listObj);
         }
 
     }

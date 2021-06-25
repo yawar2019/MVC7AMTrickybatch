@@ -256,5 +256,72 @@ namespace MVC7AMTrickybatch.Controllers
             return PartialView("_mypartialView", listObj);
         }
 
+        public FileResult GetFile()
+        {
+            return File("~/Web.config","text/plain");
+        }
+        public FileResult GetFile2(int ? id)
+        {
+            return File("~/Web.config", "application/pdf","Web.config");
+        }
+        public FileResult GetFile3()
+        {
+            return File("~/ActionResult.pdf", "application/pdf");
+        }
+        public RedirectToRouteResult GoToMyActionMethods()
+        {
+            return RedirectToAction("GetFile");
+        }
+        public RedirectToRouteResult GoToMyActionMethods2()
+        {
+            return RedirectToAction("GetFile","New");
+        }
+       
+        public RedirectToRouteResult GoToMyActionMethods4()
+        {
+            return RedirectToAction("GetFile2", "New",new {id=1});
+        }
+        public RedirectToRouteResult GoToMyActionMethods5()
+        {
+            EmployeeModel emp = new Models.EmployeeModel();
+            emp.EmpId = 1;
+            emp.EmpName = "Twinkle Twinkle Little Star";
+            emp.EmpSalary = 10000;
+
+            return RedirectToAction("TestMethod", "New",emp);
+        }
+        public ViewResult TestMethod(EmployeeModel emp)
+        {
+            return View();
+        }
+
+        public JsonResult SendjsonData()
+        {
+
+            EmployeeModel obj = new Models.EmployeeModel();
+            obj.EmpId = 1;
+            obj.EmpName = "Balu";
+            obj.EmpSalary = 3450000;
+
+
+            EmployeeModel obj1 = new Models.EmployeeModel();
+            obj1.EmpId = 2;
+            obj1.EmpName = "Mallesh";
+            obj1.EmpSalary = 230000;
+
+            EmployeeModel obj2 = new Models.EmployeeModel();
+            obj2.EmpId = 3;
+            obj2.EmpName = "jyothi";
+            obj2.EmpSalary = 3250000;
+
+            List<EmployeeModel> listObj = new List<EmployeeModel>();
+            listObj.Add(obj);
+            listObj.Add(obj1);
+            listObj.Add(obj2);
+
+            return Json(listObj, JsonRequestBehavior.AllowGet);
+
+        }
+
     }
 }

@@ -199,7 +199,7 @@ namespace MVC7AMTrickybatch.Controllers
         {
             return Redirect("~/new/gotoGoogle4?id=1&name=malesh");
         }
-        public ViewResult gotoGoogle4(int id,string name)
+        public ViewResult gotoGoogle4(int id, string name)
         {
             return View();
         }
@@ -258,11 +258,11 @@ namespace MVC7AMTrickybatch.Controllers
 
         public FileResult GetFile()
         {
-            return File("~/Web.config","text/plain");
+            return File("~/Web.config", "text/plain");
         }
-        public FileResult GetFile2(int ? id)
+        public FileResult GetFile2(int? id)
         {
-            return File("~/Web.config", "application/pdf","Web.config");
+            return File("~/Web.config", "application/pdf", "Web.config");
         }
         public FileResult GetFile3()
         {
@@ -274,12 +274,12 @@ namespace MVC7AMTrickybatch.Controllers
         }
         public RedirectToRouteResult GoToMyActionMethods2()
         {
-            return RedirectToAction("GetFile","New");
+            return RedirectToAction("GetFile", "New");
         }
-       
+
         public RedirectToRouteResult GoToMyActionMethods4()
         {
-            return RedirectToAction("GetFile2", "New",new {id=1});
+            return RedirectToAction("GetFile2", "New", new { id = 1 });
         }
         public RedirectToRouteResult GoToMyActionMethods5()
         {
@@ -288,7 +288,7 @@ namespace MVC7AMTrickybatch.Controllers
             emp.EmpName = "Twinkle Twinkle Little Star";
             emp.EmpSalary = 10000;
 
-            return RedirectToAction("TestMethod", "New",emp);
+            return RedirectToAction("TestMethod", "New", emp);
         }
         public ViewResult TestMethod(EmployeeModel emp)
         {
@@ -321,6 +321,51 @@ namespace MVC7AMTrickybatch.Controllers
 
             return Json(listObj, JsonRequestBehavior.AllowGet);
 
+        }
+
+
+        public JsonResult SendjsonData2()
+        {
+            EmployeeModel obj = new Models.EmployeeModel();
+            obj.EmpId = 1;
+            obj.EmpName = "Balu";
+            obj.EmpSalary = 3450000;
+
+
+            EmployeeModel obj1 = new Models.EmployeeModel();
+            obj1.EmpId = 2;
+            obj1.EmpName = "Mallesh";
+            obj1.EmpSalary = 230000;
+
+            EmployeeModel obj2 = new Models.EmployeeModel();
+            obj2.EmpId = 3;
+            obj2.EmpName = "jyothi";
+            obj2.EmpSalary = 3250000;
+
+            List<EmployeeModel> listObj = new List<EmployeeModel>();
+            listObj.Add(obj);
+            listObj.Add(obj1);
+            listObj.Add(obj2);
+
+            return Json(listObj);
+
+        }
+
+        public ContentResult getMeContent(int? id)
+        {
+
+            if (id == 1)
+            {
+                return Content("Test Method");
+            }
+            else if (id == 2)
+            {
+                return Content("<p style=color:red>Test Method</p>");
+            }
+            else
+            {
+                return Content("<script>alert('Hello World')</script>");
+            }
         }
 
     }

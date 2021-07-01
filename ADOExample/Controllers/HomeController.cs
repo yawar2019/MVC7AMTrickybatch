@@ -20,10 +20,48 @@ namespace ADOExample.Controllers
         {
             return View();
         }
+        //[HttpPost]
+        //public ActionResult Create(string EmpName,int EmpSalary)
+        //{
+        //    return View();
+        //}
         [HttpPost]
         public ActionResult Create(EmployeeModel emp)
         {
-            return View();
+            int i = db.SaveEmployee(emp);
+            if (i > 0)
+            {
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return View();
+            }
+        }
+        //[HttpPost]
+        //public ActionResult Create(FormCollection frm)
+        //{
+        //    string Name = frm["EmpName"];
+        //    int EmpSalary = Convert.ToInt32(frm["EmpSalary"]);
+        //    return View();
+        //}
+        public ActionResult Edit(int? id)
+        {
+            EmployeeModel emp =db.GetEmployeeById(id);
+            return View(emp);
+        }
+        [HttpPost]
+        public ActionResult Edit(EmployeeModel emp)
+        {
+            int i = db.SaveEmployee(emp);
+            if (i > 0)
+            {
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return View();
+            }
         }
     }
 }

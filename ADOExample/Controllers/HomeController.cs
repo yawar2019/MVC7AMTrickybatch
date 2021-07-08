@@ -16,6 +16,26 @@ namespace ADOExample.Controllers
             return View(db.GetAllEmployees());
         }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         public ActionResult Create()
         {
             return View();
@@ -62,6 +82,12 @@ namespace ADOExample.Controllers
             {
                 return View();
             }
+        }
+
+        public ActionResult TestLayout()
+        {
+            
+            return View();
         }
     }
 }

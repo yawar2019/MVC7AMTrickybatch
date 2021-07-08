@@ -1,4 +1,5 @@
-﻿using MVC7AMTrickybatch.Models;
+﻿using MVC7AMTrickybatch.Filters;
+using MVC7AMTrickybatch.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,11 +8,14 @@ using System.Web.Mvc;
 
 namespace MVC7AMTrickybatch.Controllers
 {
+    
     public class NewController : Controller
     {
         // GET: New
+     
         public string Number()
         {
+             int a = 10;
             return "hello";
         }
 
@@ -367,6 +371,14 @@ namespace MVC7AMTrickybatch.Controllers
                 return Content("<script>alert('Hello World')</script>");
             }
         }
+        [CustomFilter]
+        public ActionResult getFilterExample()
+        {
+            ViewBag.Player = "Dhoni";
+            return View();
 
+        }
+
+       
     }
 }

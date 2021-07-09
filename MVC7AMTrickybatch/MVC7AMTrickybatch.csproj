@@ -223,6 +223,9 @@
     <Content Include="Views\New\TestMethod.cshtml" />
     <Content Include="Views\New\getFilterExample.cshtml" />
     <Content Include="Views\Login\Login.cshtml" />
+    <Content Include="Views\Login\DashBoard.cshtml" />
+    <Content Include="Views\Login\Contact.cshtml" />
+    <Content Include="Views\Login\About.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

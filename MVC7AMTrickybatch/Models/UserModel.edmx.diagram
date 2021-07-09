@@ -5,9 +5,9 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="bcf0bb28adf645abb80ac227c1e7a92b" Name="Diagram1">
-        <EntityTypeShape EntityType="EmployeeModel.Role" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="EmployeeModel.UserDetail" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="EmployeeModel.UserRoleMapping" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EmployeeModel.Role" Width="1.5" PointX="2.25" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="EmployeeModel.UserDetail" Width="1.5" PointX="3.25" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="EmployeeModel.UserRoleMapping" Width="1.5" PointX="1.125" PointY="1.25" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

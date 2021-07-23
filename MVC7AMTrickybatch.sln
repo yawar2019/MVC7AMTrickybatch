@@ -3,15 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC7AMTrickybatch", "MVC7AMTrickybatch\MVC7AMTrickybatch.csproj", "{B8B006D1-F97F-421E-8528-188FA905DD87}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADOExample", "ADOExample\ADOExample.csproj", "{CE6E3C61-800C-4806-A5DD-95E9340B6AF4}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HndleErrorAttributeExample2", "HndleErrorAttributeExample2\HndleErrorAttributeExample2.csproj", "{3D32688E-6A86-4C7A-A891-AEF127EC36DF}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBaseApproach", "DataBaseApproach\DataBaseApproach.csproj", "{A8ECCF5C-DFE1-4FE0-B792-6DDBECDC1169}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeFirstApproach", "CodeFirstApproach\CodeFirstApproach.csproj", "{3ED5B1C6-9DDC-45ED-8C1D-AF24273D1929}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelBasedApproach", "ModelBasedApproach\ModelBasedApproach.csproj", "{B3462582-18EE-4413-A958-F20FFF0FA307}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,26 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B8B006D1-F97F-421E-8528-188FA905DD87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B8B006D1-F97F-421E-8528-188FA905DD87}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B8B006D1-F97F-421E-8528-188FA905DD87}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B8B006D1-F97F-421E-8528-188FA905DD87}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CE6E3C61-800C-4806-A5DD-95E9340B6AF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CE6E3C61-800C-4806-A5DD-95E9340B6AF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CE6E3C61-800C-4806-A5DD-95E9340B6AF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CE6E3C61-800C-4806-A5DD-95E9340B6AF4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3D32688E-6A86-4C7A-A891-AEF127EC36DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3D32688E-6A86-4C7A-A891-AEF127EC36DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3D32688E-6A86-4C7A-A891-AEF127EC36DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3D32688E-6A86-4C7A-A891-AEF127EC36DF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A8ECCF5C-DFE1-4FE0-B792-6DDBECDC1169}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A8ECCF5C-DFE1-4FE0-B792-6DDBECDC1169}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A8ECCF5C-DFE1-4FE0-B792-6DDBECDC1169}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A8ECCF5C-DFE1-4FE0-B792-6DDBECDC1169}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3ED5B1C6-9DDC-45ED-8C1D-AF24273D1929}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3ED5B1C6-9DDC-45ED-8C1D-AF24273D1929}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3ED5B1C6-9DDC-45ED-8C1D-AF24273D1929}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3ED5B1C6-9DDC-45ED-8C1D-AF24273D1929}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3462582-18EE-4413-A958-F20FFF0FA307}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3462582-18EE-4413-A958-F20FFF0FA307}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3462582-18EE-4413-A958-F20FFF0FA307}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3462582-18EE-4413-A958-F20FFF0FA307}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

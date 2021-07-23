@@ -172,6 +172,7 @@
     <Compile Include="Models\CustomRoleProvider.cs" />
     <Compile Include="Models\DepartmentModel.cs" />
     <Compile Include="Models\EmployeeModel.cs" />
+    <Compile Include="Models\RegisterExample.cs" />
     <Compile Include="Models\Role.cs">
       <DependentUpon>UserModel.tt</DependentUpon>
     </Compile>

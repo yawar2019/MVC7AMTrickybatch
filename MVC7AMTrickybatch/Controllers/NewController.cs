@@ -379,6 +379,10 @@ namespace MVC7AMTrickybatch.Controllers
 
         }
 
-       
+        public ActionResult ValidationExample()
+        {
+            return View();
+        }
+
     }
 }

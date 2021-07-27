@@ -2,6 +2,7 @@
 @{
     ViewBag.Title = "HtmlHelperExample";
 }
+@using ModelBasedApproach.UserControl
 <script>
     function fun()
     {
@@ -15,3 +16,51 @@
 @Html.TextBoxFor(y=>y.UserName, new { style = "background-color:green;", id = "txtFirstNameId", onclick = "fun()" })
 @Html.EditorFor(m=>m.EmailId)<br />
 @Html.EditorForModel(Model)
+
+@Html.Password("Pwd","123")<br />
+<span>java</span>@Html.CheckBox("java")
+<span>.net</span>@Html.CheckBox("dotnet",true)<br />
+<span>Male</span>@Html.RadioButton("Gender","Male")<br />
+<span>FeMale</span>@Html.RadioButton("Gender", "FeMale")<br />
+<span>Country</span>
+@Html.DropDownList("Country",new List<SelectListItem>()
+{
+    new SelectListItem() {Text="India",Value="1"},
+    new SelectListItem() {Text="japan",Value="2",Selected=true},
+    new SelectListItem() {Text="sri Lanka",Value="3"},
+    new SelectListItem() {Text="Bangladesh",Value="4"},
+},"Select Country")<br />
+
+@Html.DropDownList("EmployeesDet",(IEnumerable<SelectListItem>)ViewBag.Employees)
+
+<form action="~/Home/HtmlHelperExample" method="post">
+    @Html.TextBox("EmpName")<br />
+    @Html.DropDownList("Employees")<br />
+
+    <input type="submit" value="Submit" />
+    @ViewBag.msg
+</form>
+
+@MyUserControl.MyLabel("I Accept the Agreement")<br />
+@Html.createUrControl("text")<br />
+@Html.createUrControl("number")<br />
+@Html.createUrControl("file")<br />
+
+
+@helper labelbyrazzorcode(string content)
+{
+    <label>@content</label>
+}
+@labelbyrazzorcode("hi this is ali")<br />
+
+
+
+@using (Html.BeginForm("Index2", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <span>File</span>
+    <input type="file" id="fileupload" name="fileupload" />
+    <input type="submit" value="upload" />
+}
+@ViewBag.msg
+
+

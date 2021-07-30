@@ -61,5 +61,12 @@ namespace ModelBasedApproach.Controllers
             return View();
         }
 
+        public ActionResult getdata()
+        {
+            ServiceReference1.CalculatorSoapClient obj = new ServiceReference1.CalculatorSoapClient();
+            
+            return Content(obj.Add(1,2).ToString());
+        }
+
     }
 }

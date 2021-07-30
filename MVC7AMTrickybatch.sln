@@ -4,6 +4,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelBasedApproach", "ModelBasedApproach\ModelBasedApproach.csproj", "{B3462582-18EE-4413-A958-F20FFF0FA307}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F9873E6B-4EDE-43CC-A96B-0A0FBC99BD7F} = {F9873E6B-4EDE-43CC-A96B-0A0FBC99BD7F}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebService", "WebService\WebService.csproj", "{F9873E6B-4EDE-43CC-A96B-0A0FBC99BD7F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfService1", "WcfService1\WcfService1.csproj", "{4F846A53-202B-4A7E-B177-A71FA92BDE03}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +22,14 @@ Global
 		{B3462582-18EE-4413-A958-F20FFF0FA307}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B3462582-18EE-4413-A958-F20FFF0FA307}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B3462582-18EE-4413-A958-F20FFF0FA307}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9873E6B-4EDE-43CC-A96B-0A0FBC99BD7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9873E6B-4EDE-43CC-A96B-0A0FBC99BD7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9873E6B-4EDE-43CC-A96B-0A0FBC99BD7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9873E6B-4EDE-43CC-A96B-0A0FBC99BD7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F846A53-202B-4A7E-B177-A71FA92BDE03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F846A53-202B-4A7E-B177-A71FA92BDE03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F846A53-202B-4A7E-B177-A71FA92BDE03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F846A53-202B-4A7E-B177-A71FA92BDE03}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
